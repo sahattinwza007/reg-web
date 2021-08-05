@@ -62,3 +62,8 @@ body {
     font-size: 2rem;
     margin-bottom: 0.5rem;
   }
+
+  span:nth-child(3) {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
