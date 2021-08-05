@@ -20,3 +20,7 @@ function logOut() {
   liff.logout()
   window.location.reload()
 }
+
+db.collection('users').get().then(user => {
+  console.log(user);
+});
