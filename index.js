@@ -29,7 +29,7 @@ function renderUser(doc) {
     let firstname = document.createElement('span');
     let lastname = document.createElement('span');
     let studentid = document.createElement('span');
-    let userid = document.createElement('span')
+    let userid = document.createElement('span');
 
     li.setAttribute('data-id', doc.id);
     firstname.textContent = doc.data().firstname;
@@ -58,10 +58,10 @@ form.addEventListener('submit', (e) => {
       firstname: form.firstname.value,
       lastname: form.lastname.value,
       studentid: form.studentid.value,
-      userid: form.userid.value
+      userid: form.userid.value,
   })
   form.firstname.value = '';
   form.lastname.value = '';
   form.studentid.value = '';
-  form.userid.value = userId;
+  form.userid.value = '';
 })
