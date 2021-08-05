@@ -28,8 +28,9 @@ function renderUser(doc) {
     let li = document.createElement('li');
     let firstname = document.createElement('span');
     let lastname = document.createElement('span');
-    let studentid = document.createElement('span');
     let userid = document.createElement('span');
+    let studentid = document.createElement('span');
+    
 
     li.setAttribute('data-id', doc.id);
     firstname.textContent = doc.data().firstname;
