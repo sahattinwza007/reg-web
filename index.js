@@ -59,7 +59,7 @@ form.addEventListener('submit', (e) => {
       firstname: form.firstname.value,
       lastname: form.lastname.value,
       studentid: form.studentid.value,
-      userid: form.userid.value
+      userid: form.userid.value,
   })
   form.firstname.value = '';
   form.lastname.value = '';
