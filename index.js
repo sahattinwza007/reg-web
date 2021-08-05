@@ -14,14 +14,13 @@ async function getUserProfile() {
   document.getElementById("displayName").append(profile.displayName)
   document.getElementById("statusMessage").append(profile.statusMessage)
   document.getElementById("userId").append(profile.userId)
+  document.getElementById('TB_userId').value = profile.userId;
   }
 
 function logOut() {
   liff.logout()
   window.location.reload()
 }
-
-getElementById('TB_userId').value = profile.userId;
 
 let userList = document.querySelector('#userList');
 let form = document.querySelector('#addUser');
