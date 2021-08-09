@@ -37,7 +37,7 @@ function renderUser(doc) {
     firstname.textContent = doc.data().firstname;
     lastname.textContent = doc.data().lastname;
     studentid.textContent = doc.data().studentid;
-    userid.textContext = doc.data().userid;
+    userid.textContext = doc.data().TB_userId;
 
     li.appendChild(firstname);
     li.appendChild(lastname);
