@@ -1,6 +1,6 @@
-body {
+/* body {
     margin: 20px
-  }
+  } */
   
   /* button {
     display: none;
@@ -12,7 +12,7 @@ body {
     border-radius: 8px;
   } */
   
-  p {
+  /* p {
     border-bottom: 1px dashed #ddd
   }
   
@@ -36,7 +36,7 @@ body {
   #accessToken, #utouId {
     display: block;
     overflow: auto
-  }
+  } */
 
   .container {
     max-width: 960px;
