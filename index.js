@@ -11,8 +11,8 @@ main()
 async function getUserProfile() {
   const profile = await liff.getProfile()
   document.getElementById("pictureUrl").src = profile.pictureUrl
-  document.getElementById("displayName").append(profile.displayName)
-  document.getElementById("statusMessage").append(profile.statusMessage)
+  // document.getElementById("displayName").append(profile.displayName)
+  // document.getElementById("statusMessage").append(profile.statusMessage)
   document.getElementById("userId").append(profile.userId)
   document.getElementById('TB_userId').value = profile.userId;
   }
