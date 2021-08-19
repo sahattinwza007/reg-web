@@ -22,8 +22,6 @@ function logOut() {
   window.location.reload()
 }
 
-getElementById('TB_userId').value = profile.userId;
-
 let userList = document.querySelector('#userList');
 let form = document.querySelector('#addUser');
 
