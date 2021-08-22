@@ -8,7 +8,7 @@ async function main() {
 }
 main()
 
-async function getUserProfile() {
+async function getUserProfile() { // if dont use to show, dont call
   const profile = await liff.getProfile()
   document.getElementById("pictureUrl").src = profile.pictureUrl
   // document.getElementById("displayName").append(profile.displayName)
@@ -20,6 +20,10 @@ async function getUserProfile() {
 function logOut() {
   liff.logout()
   window.location.reload()
+}
+
+function checkUID(){
+  // check uid that not have in db
 }
 
 let userList = document.querySelector('#userList');
