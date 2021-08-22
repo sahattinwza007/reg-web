@@ -51,12 +51,12 @@ function renderUser(doc) {
     userList.appendChild(li);
 }
 
-db.collection('users').get().then(user => {
-  user.docs.forEach(doc => {
-      console.log(doc.data())
-      renderUser(doc);
-  })
-})
+// db.collection('users').get().then(user => {
+//   user.docs.forEach(doc => {
+//       console.log(doc.data())
+//       renderUser(doc);
+//   })
+// })
 
 db.collection("users").where("userid", "==", true)
     .get()
