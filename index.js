@@ -24,7 +24,7 @@ function logOut() {
 }
 
 function checkUID(){
-   console.log("test value: ", TB_userId)
+   window.location.href = "https://us-central1-line-oa-db.cloudfunctions.net/randomNumber";
 }
 
 let userList = document.querySelector('#userList');
