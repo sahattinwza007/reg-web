@@ -2,7 +2,6 @@ async function main() {
   await liff.init({ liffId: "1656129299-LWZXKJ5v" })
   if (liff.isLoggedIn()) {
     getUserProfile()
-    checkUID()
   } else {
     liff.login()
   }
@@ -26,6 +25,17 @@ function logOut() {
 function checkUID(){
    window.location.href = "https://us-central1-line-oa-db.cloudfunctions.net/randomNumber";
 }
+
+db.collection("users").where("userid", "==", true)
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data()); 
+    });
+  })
+  .catch((err) => {
+    console.log("err: ", err);
+  });
 
 let userList = document.querySelector('#userList');
 let form = document.querySelector('#addUser');
