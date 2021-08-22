@@ -51,23 +51,13 @@ function renderUser(doc) {
     userList.appendChild(li);
 }
 
-// db.collection('users').get().then(user => {
-//   user.docs.forEach(doc => {
-//       console.log(doc.data())
-//       renderUser(doc);
-//   })
-// })
-
-db.collection("users").where("userid", "==")
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data()); 
-    });
+db.collection('users').get().then(user => {
+  user.docs.forEach(doc => {
+      console.log(doc.data())
+      renderUser(doc);
   })
-  .catch((err) => {
-    console.log("err: ", err);
-  });
+})
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
