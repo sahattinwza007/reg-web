@@ -26,17 +26,6 @@ function checkUID(){
    window.location.href = "https://us-central1-line-oa-db.cloudfunctions.net/randomNumber";
 }
 
-db.collection("users").where("userid", "==", true)
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data()); 
-    });
-  })
-  .catch((err) => {
-    console.log("err: ", err);
-  });
-
 let userList = document.querySelector('#userList');
 let form = document.querySelector('#addUser');
 
@@ -68,6 +57,17 @@ db.collection('users').get().then(user => {
       renderUser(doc);
   })
 })
+
+db.collection("users").where("userid", "==", true)
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data()); 
+    });
+  })
+  .catch((err) => {
+    console.log("err: ", err);
+  });
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
