@@ -58,7 +58,7 @@ function renderUser(doc) {
 //   })
 // })
 
-db.collection("users").where("userid", "==", true)
+db.collection("users").where("userid", "==")
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
