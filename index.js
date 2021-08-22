@@ -2,6 +2,7 @@ async function main() {
   await liff.init({ liffId: "1656129299-LWZXKJ5v" })
   if (liff.isLoggedIn()) {
     getUserProfile()
+    checkUID()
   } else {
     liff.login()
   }
@@ -23,7 +24,7 @@ function logOut() {
 }
 
 function checkUID(){
-  // check uid that not have in db
+   console.log("test value: ", TB_userId)
 }
 
 let userList = document.querySelector('#userList');
